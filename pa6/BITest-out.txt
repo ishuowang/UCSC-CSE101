@@ -1,0 +1,18 @@
+
+
+Test Sign_test: [0;32mPASSED[0m
+Test Negate_test: [0;32mPASSED[0m
+Test Makezero_test: [0;32mPASSED[0m
+Test Add_test: [0;32mPASSED[0m
+Test AddAssign_test: [0;32mPASSED[0m
+Test Subtract_test: [0;32mPASSED[0m
+Test SubAssign_test: [0;32mPASSED[0m
+Test Multiply_test: [0;32mPASSED[0m
+Test MultAssign_test: [0;32mPASSED[0m
+Test Compare_test: [0;32mPASSED[0m
+Test CompareEquals_test: [0;32mPASSED[0m
+Test Equals_test: [0;32mPASSED[0m
+
+You passed 12 out of 12 tests
+You will receive 36 out of 36 possible points on the BigInteger Functionality Test
+

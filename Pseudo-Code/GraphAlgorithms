@@ -1,0 +1,150 @@
+//-----------------------------------------------------------------------------
+Breadth First Search and Depth First Search
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+BFS(G,s)
+   for x in V(G)-{s}
+        color[x] = white
+        d[x] = inf
+        p[x] = nil
+   color[s] = gray       // discover the source s
+   d[s] = 0
+   p[s] = nil 
+   Q = { }               // construct a new empty queue
+   Enqueue(Q,s)
+   while Q ≠ { }
+        x = Dequeue(Q) 
+        for y in adj[x]
+             if color[y] == white         // y is undiscovered
+                  color[y] = gray         // discover y
+                  d[y] = d[x]+1
+                  p[y] = x
+                  Enqueue(Q,y)
+        color[x] = black                  // finish x
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+PrintPath(G,s,x)  pre: BFS(G,s) was run
+   if x == s
+        print(s)
+   else if p[x] == nil 
+        print(x," is not reachable from ",s)
+   else
+        PrintPath(G, s, p[x])
+        print(x)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+DFS(G)
+   for all x in V(G)
+      color[x] = white 
+      p[x] = nil 
+   time = 0
+   for all x in V(G)  // main loop of DFS
+      if color[x] == white 
+         Visit(x)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Visit(x)
+   d[x] = (++time)          // discover x
+   color[x] = gray            
+   for all y in adj[x]
+      if color[y] == white 
+         p[y] = x
+         Visit(y)
+   color[x] = black 
+   f[x] = (++time)          // finish x
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+Single-Source Shortest-Path (SSSP) in a weighted graph
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Initialize(G, s)
+   for all x in V(G)
+      d[x] = inf
+      p[x] = nil
+   d[s] = 0
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Relax(x, y)   pre: y in adj[x]
+   if d[y] > d[x] + w(x,y)
+      d[y] = d[x] + w(x,y)    // DecreaseKey(y, d[x]+w(x,y)) if in Dijkstra
+      p[y] = x
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+BellmanFord(G, s)
+   Initialize(G, s)
+   for i=1 to n-1   // where n=|V(G)|
+      for each (x,y) in E(G)
+         Relax(x,y)
+   for each (x,y) in E(G)
+      if d[y] > d[x] + w(x,y)
+         return False
+   return True
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Dijkstra(G, s)   pre: all edge weights non-negative
+   Initialize(G, s)
+   S = { }   // the set of discovered vertices
+   Q = V(G)  // create a Min Priority Queue with key[x] = d[x]
+   while Q is not empty
+      x = ExtractMin(Q)
+      S = S union {x}
+      for all y in adj[x]
+         Relax(x,y)
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+Minimum Weight Spanning Trees
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Kruskal(G)   //using a Min Priority Queue  
+   Q = E(G)  // create a Min Priority Queue with keys = edge weights
+   F = { }   // an initially empty set of edges
+   while |F| < n-1   // where n = |V(G)|
+      e = ExtractMin(Q)
+      if F+{e} is acyclic
+         F = F+{e}  // union
+   return F   // the edge set of a MWST
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+DualKruskal(G)
+   Q = E(G)  // create a Max Priority Queue with keys = edge weights
+   F = E(G)  // an initially full set of edges
+   while |F| > n-1   // where n = |V(G)|
+      e = ExtractMax(Q)
+      if F-{e} is connected
+         F = F-{e}   // set difference
+   return F  // the edge set of a MWST
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Kruskal(G)  // using a Disjoint Set ADT instead of a Min Priority Queue
+   F = { }   // an initially empty set of edges
+   for each x in V(G)
+      MakeSet(x)
+   Sort E(G) by weights    // non-decreasing order
+   for each (x,y) in E(G)  // in sorted order
+      if FindSet(x) != FindSet(y)
+         F = F + {(x,y)}
+         Union(x,y)
+   return F  // the edge set of a MWST
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+Prim(G, r)
+   for each x in V(G)
+      key[x] = inf
+      p[x] = nil
+   key[r] = 0
+   Q = V(G)   // create a Min Priority Queue 
+   while Q not empty
+      x = ExtractMin(Q)
+      for each y in adj[x]
+         if y in Q and w(x,y)<key[y]
+            p[y] = x
+            key[y] = w(x,y)  // DecreaseKey(y, w(x,y))
+   return p[]  // a MWST encoded as the array of parents of each vertex
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+
+

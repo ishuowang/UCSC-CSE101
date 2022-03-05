@@ -1,0 +1,24 @@
+
+
+Test Empty_size: [0;32mPASSED[0m
+Test SetValue_size: [0;32mPASSED[0m
+Test Remove_size: [0;32mPASSED[0m
+Test Empty_traverse: [0;32mPASSED[0m
+Test Empty_clear: [0;32mPASSED[0m
+Test NonEmpty_clear: [0;32mPASSED[0m
+Test Begin_value: [0;32mPASSED[0m
+Test End_value: [0;32mPASSED[0m
+Test Next_value: [0;32mPASSED[0m
+Test Prev_value: [0;32mPASSED[0m
+Test SetValue_value: [0;32mPASSED[0m
+Test Remove_value: [0;32mPASSED[0m
+Test GetValue_value: [0;32mPASSED[0m
+Test Repeated_setValue: [0;32mPASSED[0m
+Test MultiString_equals: [0;32mPASSED[0m
+Test ToString_equals: [0;32mPASSED[0m
+Test PreString_equals: [0;32mPASSED[0m
+Test Contains_value: [0;32mPASSED[0m
+
+You passed 18 out of 18 tests
+You will receive 54 out of 54 possible points on the Dictionary Functionality Test
+

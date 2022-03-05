@@ -1,0 +1,222 @@
+==167391== Memcheck, a memory error detector
+==167391== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==167391== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==167391== Command: ./ModelMatrixTest -v
+==167391== 
+--167391-- Valgrind options:
+--167391--    --leak-check=full
+--167391--    -v
+--167391-- Contents of /proc/version:
+--167391--   Linux version 5.4.0-77-generic (buildd@lgw01-amd64-028) (gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)) #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+--167391-- 
+--167391-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--167391-- Page sizes: currently 4096, max supported 4096
+--167391-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--167391-- Reading syms from /root/wksp-simon/cse101/pa4/ModelMatrixTest
+--167391-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--167391--   Considering /usr/lib/x86_64-linux-gnu/ld-2.31.so ..
+--167391--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--167391--   Considering /lib/x86_64-linux-gnu/ld-2.31.so ..
+--167391--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--167391--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so ..
+--167391--   .. CRC is valid
+--167391-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--167391--    object doesn't have a symbol table
+--167391--    object doesn't have a dynamic symbol table
+--167391-- Scheduler: using generic scheduler lock implementation.
+--167391-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==167391== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-167391-by-root-on-???
+==167391== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-167391-by-root-on-???
+==167391== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-167391-by-root-on-???
+==167391== 
+==167391== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==167391== don't want to do, unless you know exactly what you're doing,
+==167391== or are doing some strange experiment):
+==167391==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=167391 ...command...
+==167391== 
+==167391== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==167391==   /path/to/gdb ./ModelMatrixTest
+==167391== and then give GDB the following command
+==167391==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=167391
+==167391== --pid is optional if only one valgrind process is running
+==167391== 
+--167391-- REDIR: 0x4022e10 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--167391-- REDIR: 0x4022be0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--167391-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--167391--    object doesn't have a symbol table
+--167391-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--167391--    object doesn't have a symbol table
+==167391== WARNING: new redirection conflicts with existing -- ignoring it
+--167391--     old: 0x04022e10 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--167391--     new: 0x04022e10 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--167391-- REDIR: 0x401f5f0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--167391-- REDIR: 0x4023370 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--167391-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--167391--   Considering /usr/lib/x86_64-linux-gnu/libc-2.31.so ..
+--167391--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--167391--   Considering /lib/x86_64-linux-gnu/libc-2.31.so ..
+--167391--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--167391--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.31.so ..
+--167391--   .. CRC is valid
+--167391-- REDIR: 0x48fa600 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9900 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa930 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9220 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9960 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fbdd0 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x4916e60 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x49169a0 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa760 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa590 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9890 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f92d0 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa6c0 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x4916960 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f97f0 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f93b0 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa980 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9350 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48faad0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x49180d0 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x49169e0 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f99a0 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9280 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f97b0 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x4902d20 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa9d0 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa550 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x4916ab0 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48f9c60 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa8d0 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fa870 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48fbe10 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x48faa20 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--167391-- REDIR: 0x49e2490 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--167391-- REDIR: 0x49ddb60 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
+--167391-- REDIR: 0x48f4260 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--167391-- REDIR: 0x48f5c90 (libc.so.6:calloc) redirected to 0x483dce0 (calloc)
+--167391-- REDIR: 0x48f4850 (libc.so.6:free) redirected to 0x483c9d0 (free)
+--167391-- REDIR: 0x49e22a0 (libc.so.6:__strchrnul_avx2) redirected to 0x4843540 (strchrnul)
+--167391-- REDIR: 0x49e5650 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4843660 (mempcpy)
+--167391-- REDIR: 0x49e2660 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
+==167391== 
+==167391== HEAP SUMMARY:
+==167391==     in use at exit: 240 bytes in 15 blocks
+==167391==   total heap usage: 242,756 allocs, 242,741 frees, 4,896,848 bytes allocated
+==167391== 
+==167391== Searching for pointers to 15 not-freed blocks
+==167391== Checked 73,880 bytes
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 1 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x1095C4: runTest (ModelMatrixTest.c:108)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 2 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x1095E6: runTest (ModelMatrixTest.c:109)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 3 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x109622: runTest (ModelMatrixTest.c:111)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 4 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10965E: runTest (ModelMatrixTest.c:113)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 5 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x1096CA: runTest (ModelMatrixTest.c:121)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 6 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10970E: runTest (ModelMatrixTest.c:123)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 7 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B30F: changeEntry (Matrix.c:153)
+==167391==    by 0x109752: runTest (ModelMatrixTest.c:125)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 8 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x109774: runTest (ModelMatrixTest.c:126)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 9 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A025: runTest (ModelMatrixTest.c:229)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 10 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A047: runTest (ModelMatrixTest.c:230)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 11 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A083: runTest (ModelMatrixTest.c:232)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 12 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A0BF: runTest (ModelMatrixTest.c:234)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 13 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A44A: runTest (ModelMatrixTest.c:275)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 14 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A57A: runTest (ModelMatrixTest.c:290)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== 16 bytes in 1 blocks are definitely lost in loss record 15 of 15
+==167391==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==167391==    by 0x10ACAA: newEntry (Matrix.c:14)
+==167391==    by 0x10B336: changeEntry (Matrix.c:155)
+==167391==    by 0x10A59C: runTest (ModelMatrixTest.c:291)
+==167391==    by 0x10AA85: main (ModelMatrixTest.c:383)
+==167391== 
+==167391== LEAK SUMMARY:
+==167391==    definitely lost: 240 bytes in 15 blocks
+==167391==    indirectly lost: 0 bytes in 0 blocks
+==167391==      possibly lost: 0 bytes in 0 blocks
+==167391==    still reachable: 0 bytes in 0 blocks
+==167391==         suppressed: 0 bytes in 0 blocks
+==167391== 
+==167391== ERROR SUMMARY: 15 errors from 15 contexts (suppressed: 0 from 0)

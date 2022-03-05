@@ -1,0 +1,20 @@
+
+
+Test Empty_getSize: [0;32mPASSED[0m
+Test NonEmpty_getSize: [0;32mPASSED[0m
+Test Empty_getNNZ: [0;32mPASSED[0m
+Test MakeZero_getNNZ: [0;32mPASSED[0m
+Test ChangeEntry_getNNZ: [0;32mPASSED[0m
+Test Copy_getNNZ: [0;32mPASSED[0m
+Test Transpose_getNNZ: [0;32mPASSED[0m
+Test Sum_getNNZ: [0;32mPASSED[0m
+Test Diff_getNNZ: [0;32mPASSED[0m
+Test ScalarMult_getNNZ: [0;32mPASSED[0m
+Test Product_getNNZ: [0;32mPASSED[0m
+Test Empty_equals: [0;32mPASSED[0m
+Test NonEmpty_equals: [0;32mPASSED[0m
+
+You passed 13 out of 13 tests
+
+You will receive 52 out of 52 possible points on the GraphTest
+

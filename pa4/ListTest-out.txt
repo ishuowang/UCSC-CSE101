@@ -1,0 +1,34 @@
+
+
+Test Empty_length: [0;32mPASSED[0m
+Test Append_length: [0;32mPASSED[0m
+Test Prepend_length: [0;32mPASSED[0m
+Test InsertAfter_length: [0;32mPASSED[0m
+Test InsertBefore_length: [0;32mPASSED[0m
+Test DeleteFront_length: [0;32mPASSED[0m
+Test DeleteBack_length: [0;32mPASSED[0m
+Test Delete_length: [0;32mPASSED[0m
+Test EmptyList_index: [0;32mPASSED[0m
+Test MoveFront_index: [0;32mPASSED[0m
+Test MoveBack_index: [0;32mPASSED[0m
+Test MoveNext_index: [0;32mPASSED[0m
+Test MovePrev_index: [0;32mPASSED[0m
+Test Append_index: [0;32mPASSED[0m
+Test Prepend_index: [0;32mPASSED[0m
+Test InsertAfter_index: [0;32mPASSED[0m
+Test InsertBefore_index: [0;32mPASSED[0m
+Test DeleteFront_index: [0;32mPASSED[0m
+Test DeleteBack_index: [0;32mPASSED[0m
+Test Delete_index: [0;32mPASSED[0m
+Test Empty_clear: [0;32mPASSED[0m
+Test NonEmpty_clear: [0;32mPASSED[0m
+Test Set_get: [0;32mPASSED[0m
+Test Set_front: [0;32mPASSED[0m
+Test NonEmpty_front: [0;32mPASSED[0m
+Test Set_back: [0;32mPASSED[0m
+Test NonEmpty_back: [0;32mPASSED[0m
+
+You passed 27 out of 27 tests
+
+You will receive 10 out of 10 possible points on the ListTests
+
