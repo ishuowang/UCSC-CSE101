@@ -1,4 +1,72 @@
-# Download example code directorcy without hierarchy
+# How to use?
+
+Below shows the file structure, in the folder of `pa[x]` (x specific x_th project assignment) contains the complete code with grading_sctipt tested.
+
+```
+.
+├── C/                  # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
+├── C++/                # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
+├── pa1/                # pa[x] completed project assignment
+├── pa2/                
+├── pa3/
+├── pa4/
+├── pa5/
+├── pa6/
+├── pa7/
+├── pa8/
+├── Pseudo-Code/        # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
+├── README.md
+└── Resource/
+```
+
+Gradding script is posted at this [repository](https://github.com/agavgavi/cse101-pt.w22.git).
+
+# Quick start
+
+To test the code by yourself, please follow the instruction following:
+
+1. clone this repository
+
+```
+git clone git@github.com:21wang12/UCSC-CSE101.git
+```
+2. change your work directory to specific pa, please change `[x]` whith the number of pa you want to.
+
+```sh
+cd ./UCSC-CSE101/
+cd ./pa[x]/         
+```
+
+take pa1 as example
+
+```sh
+cd ./UCSC-CSE101/
+cd ./pa1/ 
+```
+
+3. download and run gradding script, please change `[x]` whith the number of pa you want to.
+
+```sh
+wget https://raw.githubusercontent.com/agavgavi/cse101-pt.w22/main/pa[x]/pa[x].sh -o pa[x].sh
+chmod 777 ./pa[x].sh
+./pa[x].sh
+```
+
+also, take pa1 as example
+
+```sh
+wget https://raw.githubusercontent.com/agavgavi/cse101-pt.w22/main/pa1/pa1.sh -o pa1.sh
+chmod 777 ./pa1.sh
+./pa1.sh
+```
+
+4. submit & enjoy your project assignment😋.
+
+
+
+# Useful infomation(option)
+
+## Download example code directorcy without hierarchy
 
 Use blow command to get the PA you want to download
 
@@ -16,12 +84,11 @@ cd /cse101
 wget -nH --cut-dirs=3 -e robots=off -r -R "index.html*,*.gif"  https://classes.soe.ucsc.edu/cse101/Spring21/Examples/pa1/
 ```
 
-# Configure Debug mode in VSCode
+## Configure Debug mode in VSCode
 
 1. Create a `launch.json` file under current work directory `.vscode/` folder and edit it like this
 ```json
 {
-
     "version": "0.2.0",
     "configurations": [
         {
@@ -58,3 +125,9 @@ COMPILE        = gcc -std=c17 -Wall -c -g
 4. In the VSCode editor, open the file you want to debug with(ie: in pa2, open the FindPath.c in the vscode editor, so `${fileDirname}/${fileBasenameNoExtension}` in `launch.json` can find the FindPath program that you want to debug with)
 
 5. Click the `Run and Debug` button in the left column of VSCode, and click the start debuging button, then the program will be execute in debug mode.
+
+Here is the screenshot shows the debug mode, this really bring more convience for debugging.
+
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/38482259/159444058-e8d79f69-e2d3-4f58-a2e6-3298a5584bb2.png">
+
+
