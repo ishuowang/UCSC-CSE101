@@ -185,7 +185,7 @@ BigInteger BigInteger::sub(const BigInteger& N) const{
         return newM.add(newN);
     }
     // make the bigone minus the littleone
-    if(newN.digits.length() > newM.digits.length() ){
+    if(newN.digits.length() > newM.digits.length()){
         BigInteger temp = newN - newM;
         temp.signum *= -1;
         return temp;

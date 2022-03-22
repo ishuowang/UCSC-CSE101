@@ -324,29 +324,6 @@ bool isAncestor(Dictionary::Node* A, Dictionary::Node* B){
 }
 
 void Dictionary::next(){
-    // //If the current iterator is at the last pair, makes current undefined.
-    // if(current == findMax(root)){
-    //     current = nil;
-    //     return;
-    // }
-    // // Totally 2 cases
-    // // case 1: current has a right child, the next Node is left most node in current's right subtree.
-    // if(current->right != nullptr){
-    //     current = current->right;
-    //     while(current->left != nullptr){
-    //         current = current->left;
-    //     }
-    //     return;
-    // }
-    // // case 2: current has no right child, the next Node is the lowest ancestor of current whose left child is also an ancestor of current
-    // if(current->right == nullptr){
-    //     Node* temp = current;
-    //     current = current->parent;
-    //     while(! isAncestor(current->left, temp)){
-    //         current = current->parent;
-    //     }
-    //     return;
-    // }
     current = findNext(current);
 }
 

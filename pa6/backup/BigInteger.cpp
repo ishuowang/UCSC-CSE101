@@ -9,7 +9,8 @@ const int POWER = 9;
 // Helper function:
 // Normalize BigInteger N.
 // Guarantte each element in digits less than BASE.
-// Clean front 0 element. eg: 000 000 230 000 000 -> 230 000 000
+// Clean front 0 element. 
+// eg: 000 000 230 000 000 -> 230 000 000
 void normalize(BigInteger& N){
     while(N.digits.length() > 0 && N.digits.front() == 0){
         N.digits.moveFront();
@@ -42,7 +43,6 @@ void normalize(BigInteger& N){
             N.digits.setAfter(prev_elem + carry);
             N.digits.moveNext();
         }else if(carry <= -1){
-            // TODO
             N.digits.setAfter(- N.digits.front());
             N.signum = -1;
             if(N.digits.front() < 0){
@@ -82,7 +82,7 @@ BigInteger::BigInteger(std::string s){
     if(s == "0"){
         return;
     }
-    // eg: "-1234"
+    // eg: s = "-1234" -> s = "1234"
     if(s.substr(0,1) == "-" || s.substr(0,1) == "+"){
         if(s.substr(0,1) == "-"){
             this->signum = -1;
@@ -110,11 +110,6 @@ BigInteger::BigInteger(std::string s){
         long num = std::stol(num_str);
         this->digits.insertAfter(num);
     }
-    // if(this->digits.front() < 0){
-    //     this->digits.moveFront();
-    //     this->digits.setAfter(-this->digits.front());
-    //     this->signum = -1;
-    // }
 }
 
 BigInteger::BigInteger(const BigInteger& N){
@@ -141,7 +136,6 @@ void BigInteger::negate(){
     this->signum *= -1;
 }
 
-// TODO: check
 BigInteger BigInteger::add(const BigInteger& N) const{
     BigInteger newM(*this);
     BigInteger newN(N);
@@ -191,7 +185,7 @@ BigInteger BigInteger::sub(const BigInteger& N) const{
         return newM.add(newN);
     }
     // make the bigone minus the littleone
-    if(newN.digits.length() > newM.digits.length() ){
+    if(newN.digits.length() > newM.digits.length()){
         BigInteger temp = newN - newM;
         temp.signum *= -1;
         return temp;
@@ -242,13 +236,14 @@ BigInteger BigInteger::sub(const BigInteger& N) const{
 
 
 void shift(BigInteger& N, int s){
+    // Record the origin position in N.digits
     int pos = N.digits.position();
     N.digits.moveBack();
     for(int i = 0; i < s; i++){
         N.digits.insertBefore(0);
     }
 
-    // recovery position.
+    // Recovery to origin position.
     while(N.digits.position() != pos){
         if(N.digits.position() < pos){
             N.digits.moveNext();
@@ -258,7 +253,6 @@ void shift(BigInteger& N, int s){
     }
 }
 
-// TODO: Too slow
 BigInteger BigInteger::mult(const BigInteger& N) const{
     BigInteger newM(*this);
     BigInteger newN(N);
@@ -299,14 +293,6 @@ BigInteger BigInteger::mult(const BigInteger& N) const{
             A.digits.moveFront();
             A.digits.insertAfter(b);
         }
-        // Recovery position
-        // while(scalerMult.digits.position() != pos){
-        //     if(scalerMult.digits.position() > pos){
-        //         scalerMult.digits.movePrev();
-        //     }else{
-        //         scalerMult.digits.moveNext();
-        //     }
-        // }
         SHIFT ++;
     }
     normalize(A);
@@ -321,6 +307,7 @@ std::string BigInteger::to_string(){
     std::string s = "";
     if(this->signum == -1){
         s += '-';
+        // Add some space between sign and digits.
         // +-------------------------------+ DEBUG USE +-------------------------------+ //
         // s += ' ';
         // +-------------------------------+ DEBUG END +-------------------------------+ //
@@ -336,7 +323,7 @@ std::string BigInteger::to_string(){
         }
         s += elem_str;
         
-        // Add some space between two digit.
+        // Add some space between two digits.
         // +-------------------------------+ DEBUG USE +-------------------------------+ //
         // if(digits.position() < digits.length()){
         //     s += " ";

@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
 SRCDIR=https://raw.githubusercontent.com/agavgavi/cse101-pt.w22/master/pa6
-NUMTESTS=5
+NUMTESTS=3
 PNTSPERTEST=4
 let MAXPTS=$NUMTESTS*$PNTSPERTEST
-TIME=30
+TIME=90
 
 if [ ! -e backup ]; then
   mkdir backup

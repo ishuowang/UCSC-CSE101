@@ -1,148 +1,148 @@
-==366518== Memcheck, a memory error detector
-==366518== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==366518== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
-==366518== Command: ./Order infile4.txt outfile4.txt
-==366518== 
---366518-- Valgrind options:
---366518--    --leak-check=full
---366518--    -v
---366518-- Contents of /proc/version:
---366518--   Linux version 5.4.0-77-generic (buildd@lgw01-amd64-028) (gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)) #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
---366518-- 
---366518-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
---366518-- Page sizes: currently 4096, max supported 4096
---366518-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
---366518-- Reading syms from /root/wksp-simon/cse101/pa7/Order
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
---366518--   Considering /usr/lib/x86_64-linux-gnu/ld-2.31.so ..
---366518--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
---366518--   Considering /lib/x86_64-linux-gnu/ld-2.31.so ..
---366518--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
---366518--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so ..
---366518--   .. CRC is valid
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
---366518--    object doesn't have a symbol table
---366518--    object doesn't have a dynamic symbol table
---366518-- Scheduler: using generic scheduler lock implementation.
---366518-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
-==366518== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-366518-by-root-on-???
-==366518== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-366518-by-root-on-???
-==366518== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-366518-by-root-on-???
-==366518== 
-==366518== TO CONTROL THIS PROCESS USING vgdb (which you probably
-==366518== don't want to do, unless you know exactly what you're doing,
-==366518== or are doing some strange experiment):
-==366518==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=366518 ...command...
-==366518== 
-==366518== TO DEBUG THIS PROCESS USING GDB: start GDB like this
-==366518==   /path/to/gdb ./Order
-==366518== and then give GDB the following command
-==366518==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=366518
-==366518== --pid is optional if only one valgrind process is running
-==366518== 
---366518-- REDIR: 0x4022e10 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
---366518-- REDIR: 0x4022be0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
---366518--    object doesn't have a symbol table
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
---366518--    object doesn't have a symbol table
-==366518== WARNING: new redirection conflicts with existing -- ignoring it
---366518--     old: 0x04022e10 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
---366518--     new: 0x04022e10 (strlen              ) R-> (2007.0) 0x0483f060 strlen
---366518-- REDIR: 0x401f5f0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
---366518-- REDIR: 0x4023370 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
---366518--    object doesn't have a symbol table
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
---366518--    object doesn't have a symbol table
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
---366518--   Considering /usr/lib/x86_64-linux-gnu/libc-2.31.so ..
---366518--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
---366518--   Considering /lib/x86_64-linux-gnu/libc-2.31.so ..
---366518--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
---366518--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.31.so ..
---366518--   .. CRC is valid
---366518-- Reading syms from /usr/lib/x86_64-linux-gnu/libm-2.31.so
---366518--   Considering /usr/lib/x86_64-linux-gnu/libm-2.31.so ..
---366518--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
---366518--   Considering /lib/x86_64-linux-gnu/libm-2.31.so ..
---366518--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
---366518--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.31.so ..
---366518--   .. CRC is valid
---366518-- REDIR: 0x4af7600 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6900 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7930 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6220 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6960 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af8dd0 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b13e60 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b139a0 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7760 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7590 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6890 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af62d0 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af76c0 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b13960 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af67f0 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af63b0 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7980 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6350 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7ad0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b150d0 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b139e0 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af69a0 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6280 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af67b0 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4affd20 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af79d0 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7550 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4b13ab0 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af6c60 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af78d0 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7870 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af8e10 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4af7a20 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
---366518-- REDIR: 0x4bdf490 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
---366518-- REDIR: 0x4af1260 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
---366518-- REDIR: 0x4bdf660 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
---366518-- REDIR: 0x4bdbc50 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x48421e0 (bcmp)
---366518-- REDIR: 0x4bdab60 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
---366518-- REDIR: 0x4af7120 (libc.so.6:__GI_strstr) redirected to 0x4843ca0 (__strstr_sse2)
---366518-- REDIR: 0x4901b80 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x483c510 (operator new[](unsigned long))
---366518-- REDIR: 0x4be2670 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48429f0 (memmove)
---366518-- REDIR: 0x4901b20 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x483bdf0 (operator new(unsigned long))
---366518-- REDIR: 0x4bdb4c0 (libc.so.6:__memchr_avx2) redirected to 0x4840050 (memchr)
---366518-- REDIR: 0x48ffd70 (libstdc++.so.6:operator delete(void*)) redirected to 0x483cf50 (operator delete(void*))
-==366518== 
-==366518== Process terminating with default action of signal 15 (SIGTERM)
-==366518==    at 0x4842210: bcmp (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==366518==    by 0x499C4FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
-==366518==    by 0x10DFAE: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:6229)
-==366518==    by 0x10CD97: Dictionary::setValue(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (Dictionary.cpp:220)
-==366518==    by 0x10C0A8: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:36)
-==366518==    by 0x10C0EA: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:38)
-==366518==    by 0x10C0EA: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:38)
-==366518==    by 0x10C0EA: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:38)
-==366518==    by 0x10C0CF: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:37)
-==366518==    by 0x10C0CF: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:37)
-==366518==    by 0x10C0EA: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:38)
-==366518==    by 0x10C0CF: Dictionary::preOrderCopy(Dictionary::Node*, Dictionary::Node*) (Dictionary.cpp:37)
---366518-- REDIR: 0x4af1850 (libc.so.6:free) redirected to 0x483c9d0 (free)
-==366518== 
-==366518== HEAP SUMMARY:
-==366518==     in use at exit: 11,527,028 bytes in 180,682 blocks
-==366518==   total heap usage: 218,437 allocs, 37,755 frees, 12,270,820 bytes allocated
-==366518== 
-==366518== Searching for pointers to 180,682 not-freed blocks
-==366518== Checked 8,491,368 bytes
-==366518== 
-==366518== LEAK SUMMARY:
-==366518==    definitely lost: 0 bytes in 0 blocks
-==366518==    indirectly lost: 0 bytes in 0 blocks
-==366518==      possibly lost: 0 bytes in 0 blocks
-==366518==    still reachable: 11,527,028 bytes in 180,682 blocks
-==366518==         suppressed: 0 bytes in 0 blocks
-==366518== Reachable blocks (those to which a pointer was found) are not shown.
-==366518== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==366518== 
-==366518== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==40043== Memcheck, a memory error detector
+==40043== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==40043== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==40043== Command: ./Order infile4.txt outfile4.txt
+==40043== 
+--40043-- Valgrind options:
+--40043--    --leak-check=full
+--40043--    -v
+--40043-- Contents of /proc/version:
+--40043--   Linux version 5.4.0-77-generic (buildd@lgw01-amd64-028) (gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)) #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+--40043-- 
+--40043-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--40043-- Page sizes: currently 4096, max supported 4096
+--40043-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--40043-- Reading syms from /root/wksp-simon/cse101/pa7/Order
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--40043--   Considering /usr/lib/x86_64-linux-gnu/ld-2.31.so ..
+--40043--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--40043--   Considering /lib/x86_64-linux-gnu/ld-2.31.so ..
+--40043--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--40043--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so ..
+--40043--   .. CRC is valid
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--40043--    object doesn't have a symbol table
+--40043--    object doesn't have a dynamic symbol table
+--40043-- Scheduler: using generic scheduler lock implementation.
+--40043-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==40043== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-40043-by-root-on-???
+==40043== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-40043-by-root-on-???
+==40043== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-40043-by-root-on-???
+==40043== 
+==40043== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==40043== don't want to do, unless you know exactly what you're doing,
+==40043== or are doing some strange experiment):
+==40043==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=40043 ...command...
+==40043== 
+==40043== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==40043==   /path/to/gdb ./Order
+==40043== and then give GDB the following command
+==40043==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=40043
+==40043== --pid is optional if only one valgrind process is running
+==40043== 
+--40043-- REDIR: 0x4022e10 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--40043-- REDIR: 0x4022be0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--40043--    object doesn't have a symbol table
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--40043--    object doesn't have a symbol table
+==40043== WARNING: new redirection conflicts with existing -- ignoring it
+--40043--     old: 0x04022e10 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--40043--     new: 0x04022e10 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--40043-- REDIR: 0x401f5f0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--40043-- REDIR: 0x4023370 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+--40043--    object doesn't have a symbol table
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--40043--    object doesn't have a symbol table
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--40043--   Considering /usr/lib/x86_64-linux-gnu/libc-2.31.so ..
+--40043--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--40043--   Considering /lib/x86_64-linux-gnu/libc-2.31.so ..
+--40043--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--40043--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.31.so ..
+--40043--   .. CRC is valid
+--40043-- Reading syms from /usr/lib/x86_64-linux-gnu/libm-2.31.so
+--40043--   Considering /usr/lib/x86_64-linux-gnu/libm-2.31.so ..
+--40043--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
+--40043--   Considering /lib/x86_64-linux-gnu/libm-2.31.so ..
+--40043--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
+--40043--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.31.so ..
+--40043--   .. CRC is valid
+--40043-- REDIR: 0x4af7600 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6900 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7930 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6220 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6960 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af8dd0 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b13e60 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b139a0 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7760 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7590 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6890 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af62d0 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af76c0 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b13960 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af67f0 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af63b0 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7980 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6350 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7ad0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b150d0 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b139e0 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af69a0 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6280 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af67b0 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4affd20 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af79d0 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7550 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4b13ab0 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af6c60 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af78d0 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7870 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af8e10 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4af7a20 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--40043-- REDIR: 0x4bdf490 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--40043-- REDIR: 0x4af1260 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--40043-- REDIR: 0x4bdf660 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
+--40043-- REDIR: 0x4bdbc50 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x48421e0 (bcmp)
+--40043-- REDIR: 0x4bdab60 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
+--40043-- REDIR: 0x4af7120 (libc.so.6:__GI_strstr) redirected to 0x4843ca0 (__strstr_sse2)
+--40043-- REDIR: 0x4901b80 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x483c510 (operator new[](unsigned long))
+--40043-- REDIR: 0x4be2670 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48429f0 (memmove)
+--40043-- REDIR: 0x4901b20 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x483bdf0 (operator new(unsigned long))
+--40043-- REDIR: 0x4bdb4c0 (libc.so.6:__memchr_avx2) redirected to 0x4840050 (memchr)
+--40043-- REDIR: 0x48ffd70 (libstdc++.so.6:operator delete(void*)) redirected to 0x483cf50 (operator delete(void*))
+==40043== 
+==40043== Process terminating with default action of signal 15 (SIGTERM)
+==40043==    at 0x499C4FC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==40043==    by 0x10DEE3: bool std::operator><char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:6267)
+==40043==    by 0x10C225: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:59)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C257: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:60)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C257: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:60)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C297: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:62)
+==40043==    by 0x10C257: Dictionary::search(Dictionary::Node*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const (Dictionary.cpp:60)
+--40043-- REDIR: 0x4af1850 (libc.so.6:free) redirected to 0x483c9d0 (free)
+==40043== 
+==40043== HEAP SUMMARY:
+==40043==     in use at exit: 10,496,711 bytes in 164,524 blocks
+==40043==   total heap usage: 199,853 allocs, 35,329 frees, 11,197,529 bytes allocated
+==40043== 
+==40043== Searching for pointers to 164,524 not-freed blocks
+==40043== Checked 7,740,704 bytes
+==40043== 
+==40043== LEAK SUMMARY:
+==40043==    definitely lost: 0 bytes in 0 blocks
+==40043==    indirectly lost: 0 bytes in 0 blocks
+==40043==      possibly lost: 0 bytes in 0 blocks
+==40043==    still reachable: 10,496,711 bytes in 164,524 blocks
+==40043==         suppressed: 0 bytes in 0 blocks
+==40043== Reachable blocks (those to which a pointer was found) are not shown.
+==40043== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==40043== 
+==40043== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
