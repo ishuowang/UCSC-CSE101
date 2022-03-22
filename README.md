@@ -21,16 +21,14 @@ wget -nH --cut-dirs=3 -e robots=off -r -R "index.html*,*.gif"  https://classes.s
 1. Create a `launch.json` file under current work directory `.vscode/` folder and edit it like this
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
     "version": "0.2.0",
     "configurations": [
         {
             "name": "pa2",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}", // path to executable program.
+            "program": "${fileDirname}/${fileBasenameNoExtension}", 
             "args": ["in1","my-out1"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
