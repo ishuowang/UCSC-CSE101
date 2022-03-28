@@ -6,7 +6,7 @@ Below shows the file structure, in the folder of `pa[x]` (x specific x_th projec
 .
 ├── C/                  # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
 ├── C++/                # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
-├── pa1/                # pa[x] completed project assignment
+├── pa1/                # pa[x]: completed project assignment
 ├── pa2/                
 ├── pa3/
 ├── pa4/
@@ -16,7 +16,7 @@ Below shows the file structure, in the folder of `pa[x]` (x specific x_th projec
 ├── pa8/
 ├── Pseudo-Code/        # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
 ├── README.md
-└── Resource/
+└── Resource/           # .pdf files: assignment description 
 ```
 
 Gradding script is posted at this [repository](https://github.com/agavgavi/cse101-pt.w22.git).
