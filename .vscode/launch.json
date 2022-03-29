@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
             "name": "pa8-ModelDictionaryTest",
             "type": "cppdbg",
             "request": "launch",
@@ -71,7 +79,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/root/wksp-simon/cse101/pa6/Arithmetic",
-            "args": ["infile1.txt","my-out1.txt"],
+            "args": [
+                "infile1.txt",
+                "my-out1.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "/root/wksp-simon/cse101/pa6/",
             "environment": [],
@@ -113,7 +124,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": ["infile1.txt","my-out1"],
+            "args": [
+                "infile1.txt",
+                "my-out1"
+            ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
@@ -134,7 +148,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": ["in1","my-out1"],
+            "args": [
+                "in1",
+                "my-out1"
+            ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
