@@ -3,7 +3,7 @@ I got an **__`A`__** in this course, all the source code and quiz in this course
 
 # How to use?
 
-Below shows the file structure, in the folder of `pa[x]` (x specific x_th project assignment) contains the complete code with grading_sctipt tested.
+Below shows the file structure, the folder **`pa[x]/backup`** (x specific x_th project assignment) contains the complete code with grading_sctipt tested.
 
 ```
 .
