@@ -9,10 +9,10 @@ Course website shows [here](https://classes.soe.ucsc.edu/cse101/Winter22/) .Belo
 .
 ├── C/                  # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
 ├── C++/                # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
-├── pa1/                # pa[x]: completed project assignment
-├── pa2/                
-├── pa3/
-├── pa4/
+├── pa1/                # List
+├── pa2/                # FindGraph
+├── pa3/                # FindComponents
+├── pa4/                # 
 ├── pa5/
 ├── pa6/
 ├── pa7/
