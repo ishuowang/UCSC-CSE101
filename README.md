@@ -9,14 +9,14 @@ Course website shows [here](https://classes.soe.ucsc.edu/cse101/Winter22/) .Belo
 .
 ├── C/                  # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
 ├── C++/                # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
-├── pa1/                # List
-├── pa2/                # FindGraph
-├── pa3/                # FindComponents
-├── pa4/                # 
-├── pa5/
-├── pa6/
-├── pa7/
-├── pa8/
+├── pa1/                # List, C version
+├── pa2/                # FindGraph, C version
+├── pa3/                # FindComponents, C version
+├── pa4/                # Matrix, C version
+├── pa5/                # List, C++ version
+├── pa6/                # Arithmetic, C++ version
+├── pa7/                # Dictionary, C++ version
+├── pa8/                # Order, C++ version
 ├── Pseudo-Code/        # provided at Example: https://classes.soe.ucsc.edu/cse101/Winter22
 ├── README.md
 └── Resource/           # .pdf files: assignment description 
