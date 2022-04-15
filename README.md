@@ -63,7 +63,7 @@ chmod 777 ./pa1.sh
 ./pa1.sh
 ```
 
-4. submit & enjoy your project assignment😋.
+4. submit `backup` folder & enjoy your project assignment😋.
 
 
 
