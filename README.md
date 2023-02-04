@@ -1,6 +1,8 @@
 # Congrats⚡️
 I got an **__`A`__** in this course, all the source code and quiz in this course will published at this repo.
 
+Contact me for help： sw3310@columbia.edu
+
 # How to use?
 
 Course website shows [here](https://classes.soe.ucsc.edu/cse101/Winter22/). Below shows the file structure, the folder **`pa[x]/backup`** (x specific x_th project assignment) contains the complete code with grading_sctipt tested.
