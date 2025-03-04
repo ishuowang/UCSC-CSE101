@@ -1,7 +1,7 @@
 # Congrats⚡️
 I got an **__`A`__** in this course, all the source code and quiz in this course will published at this repo.
 
-⚠️Please contact me when use this code: sw3310@columbia.edu
+⚠️Please contact me when use this code: ishuowang@qq.com
 
 # How to use?
 
